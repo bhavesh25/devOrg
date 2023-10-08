@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Custom Related List</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightning__Tab</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+     <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightningCommunity__Default">
+            <property name="relatedListLabel" type="String"  description="(String) Related list header label"/>
+            <property name="sobjectApiName" type="String"  description="Name of child sobject"/>
+            <property name="relatedFieldApiName" type="String"  description="Name of lookup or master-detail field on child sobject Ex AccountId when sObject Name is Contact"/>
+            <property name="parentObjNameField" type="String"  description="Parent Object's name field, for eg CaseNumber for Case, Name For Account"/>
+            <property name="numberOfRecords" type="Integer"  description="number of records in a list. Default is 6"/>
+            <property name="sortedBy" type="String"  description="Name of field used for sorting"/>
+            <property name="sortedDirection" type="String"  description="ASC or DESC for ascending/descending directions of sorting"/>
+            <property name="fields" type="String"  description="List of API Names for displaying, comma seperated"/>
+            <property name="fieldLabel" type="String" description="List of Field Labels for displaying, comma seperated"/>
+            <property name="fieldType" type="String" description="Default is text, other types are boolean, currency, currency, date, date-local, date-time, email, location, number, percent, phone, text, url"/>
+            <property name="linkField" type="String"  description="Primary field to make clickable"/>
+            <property name="filterCondition" type="String" description="SOQL condition to be used after WHERE clouse"/>
+            <property name="recordIdPrefixForUrl" type="String" description="Community prefix before Record Id (including /)"/>
+            <property name="isViewAllPage" type="Boolean" default="false" description="true if setting it for View All Page"/>
+            <property name="viewAllPageHeight" type="Integer" default="600" description="View all page height"/>
+            
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

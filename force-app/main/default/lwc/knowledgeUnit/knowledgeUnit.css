@@ -1,0 +1,13 @@
+.chart {
+  width: 400px;
+  height: 300px;
+}
+.lefticon {
+ float:left;
+}
+.righticon {
+   float:right;
+}
+.my-icon{
+  --slds-c-icon-color-foreground-default: #66a0ff;
+}

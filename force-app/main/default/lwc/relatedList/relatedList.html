@@ -1,0 +1,74 @@
+<template>
+  
+  <template if:true={state.showRelatedList}>
+    <lightning-layout class="slds-m-top_x-small">
+      <article class="slds-card lightning-card slds-card_boundary">
+        <div class="slds-page-header slds-grid slds-theme_shade" style="border-bottom: 1px solid rgb(201, 201, 201);">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <lightning-icon icon-name={state.iconName} size="small"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+              <template lwc:if={isViewAllPage}>
+                <nav role="navigation" aria-label="Breadcrumbs">
+                  <ol class="slds-breadcrumb slds-list_horizontal slds-wrap">
+                    <li class="slds-breadcrumb__item">
+                      <a onclick={openObjectHomeHandler}>{state.pluralLabel}</a>
+                    </li>
+                    <li class="slds-breadcrumb__item">
+                      <a onclick={openRecordPage}>{state.parentRecName}</a>
+                    </li>
+                  </ol>
+                </nav>
+
+                
+                
+              </template>
+
+              <h2 class="slds-card__header-title">
+                {relatedListLabel}{state.title}
+              </h2>
+            </div>
+            <template lwc:if={isViewAllPage}>
+            <div class="slds-float--right">
+              <button class="slds-button slds-button_icon slds-button_icon-border-filled" name="refreshButton"
+              title="Refresh" type="button" part="button button-icon" onclick={init}>
+              <lightning-icon icon-name="utility:refresh" size="small" alternative-text="Refresh" title="Refresh"></lightning-icon>
+            </button>
+            </div>
+          </template>
+          </header>
+        </div>
+        <template if:true={hasRecords}>
+          <template lwc:if={isViewAllPage}>
+            <template lwc:if={showSpinner}>
+              <lightning-spinner
+                          alternative-text="Loading..." variant="brand">
+                      </lightning-spinner>
+            </template>
+            <div style={datatableHeight}>
+              <div style={datatableMaxHeight}>
+                <lightning-datatable class="related-list slds-table slds-table_header-fixed slds-table_bordered"
+                  columns={state.columns} data={state.records} key-field="Id" hide-checkbox-column="true"
+                  resize-column-disabled="true" enable-infinite-loading onloadmore={loadMoreData}></lightning-datatable>
+              </div>
+              <div style="text-align: center;">{loadMoreStatus}</div>
+            </div>
+
+          </template>
+          <template lwc:else>
+            <div>
+              <lightning-datatable class="related-list" columns={state.columns} data={state.records} key-field="Id"
+                hide-checkbox-column="true" resize-column-disabled="true">
+              </lightning-datatable>
+            </div>
+            <footer class="slds-card__footer" style="border-top:none;margin-top:0">
+              <!--<a href={viewAllLink} target="_blank">View All</a>-->
+              <a onclick={openViewAll}> View All</a>
+            </footer>
+          </template>
+        </template>
+      </article>
+    </lightning-layout>
+  </template>
+</template>

@@ -1,0 +1,68 @@
+time.icon
+{
+  font-size: 1em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 7px;
+  /*box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;*/
+  overflow: hidden;
+  border: 1px solid #6E90FE;
+}
+time.icon *
+{
+  display: block;
+  width: 100%;
+  font-size: .7em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+time.icon strong
+{
+  position: absolute;
+  top: 0;
+  padding: 1px 0;
+  color: black;
+  background-color: #C6D6FA;
+  /*border-bottom: 1px dashed #6E90FE;
+  box-shadow: 0 2px 0 #C6D6FA;*/
+}
+
+time.icon span
+{
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  padding-top: 15px;
+  color: #2f2f2f;
+}
+.calendar-icon{
+    margin-left: 0em;
+    padding-right: 0px;
+}
+.tooltip-container{
+    background-color: #FAFAFA;
+    padding: 12px;
+}
+.generate-booklet-button {
+    color: black;
+    background-color: #C6D6FA;
+}
+.action-items-button{
+    color: black;
+    background-image: linear-gradient(to right, #67A0FF , #CEA6FF);
+}
+.tooltip-buttons{
+    margin:0px;
+    margin-top:8px;
+}
+.tooltip-buttons-col{
+    padding: 0px;
+}
+.tooltip-event-detail{
+    padding-right: 0px;
+    width: 100%;
+    padding-left: 6px;
+}

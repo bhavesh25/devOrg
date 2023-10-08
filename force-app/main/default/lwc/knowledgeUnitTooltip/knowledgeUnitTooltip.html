@@ -1,0 +1,35 @@
+<template>
+    <template lwc:if={isZoomOrGmail}>
+        <div class="tooltip-container">
+            <div class="slds-grid slds-gutters slds-var-p-left_x-small slds-var-p-right_x-small">
+                <div class="slds-col calendar-icon">
+                    <time datetime="2014-09-20" class="icon">
+                        <strong>{month}</strong>
+                        <span>{date}</span>
+                    </time>
+                </div>
+                <div class="slds-col tooltip-event-detail">
+                    <b style="font-weight: 900;">{tooltipData.Name}</b><br />
+                    {tooltipData.DateFormatted}
+                </div>
+            </div>
+
+        </div>
+        <div class="slds-grid slds-gutters slds-var-m-top_medium slds-var-m-bottom_small tooltip-buttons">
+            <div class="slds-col tooltip-buttons-col">
+                <button
+                    class="slds-var-p-left_x-small slds-var-p-right_x-small generate-booklet-button slds-button">Generate
+                    Meeting Booklet (TL;DR)</button>
+            </div>
+            <div class="slds-col tooltip-buttons-col slds-var-m-left_small">
+                <button class="slds-var-p-left_x-small slds-var-p-right_small action-items-button slds-button">Action
+                    Items</button>
+            </div>
+        </div>
+    </template>
+    <template lwc:else>
+        <h3 style="font-size:14px">{tooltipData.Name}</h3>
+        <h1 style="font-size:15px">{tooltipData.Team}</h1>
+        <p style="font-size:12px">{tooltipData.Description}</p>
+    </template>
+</template>

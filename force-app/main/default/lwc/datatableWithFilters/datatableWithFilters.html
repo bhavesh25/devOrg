@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-tabs_card slds-tabs_default">
+        <template for:each={pillData} for:item="currentPillData" for:index="index">
+            <lightning-pill
+                key={currentPillData.fieldIndex}
+                label={currentPillData.fieldLabel}
+                name={currentPillData.fieldName}
+                data-index={index}
+                data-value={currentPillData.fieldValue}
+                onremove={removeHandler}
+                style="--sds-c-pill-color-background: rgb(245, 169, 111); --sds-c-pill-color-background-hover: rgb(116, 187, 249);"
+            ></lightning-pill>
+        </template>
+        <div class="slds-grid slds-gutters">
+            <template for:each={filterData} for:item="currentFilterData">
+                <lightning-combobox
+                    key={currentFilterData.fieldIndex}
+                    name={currentFilterData.fieldName}
+                    label={currentFilterData.fieldLabel}
+                    value={currentFilterData.fieldValue}
+                    options={currentFilterData.fieldOptions}
+                    onchange={changeHandler}
+                    class="slds-p-vertical_x-small slds-p-horizontal_medium"
+                ></lightning-combobox>
+            </template>
+            <lightning-button variant="neutral" label="Reset" onclick={resetAll} class="slds-p-top_x-large"></lightning-button>
+        </div>
+<!-- Lightning Datatable -->
+        <template if:true={tableData}>
+            <c-datatable-lwc columns={columns}
+                acc-list={tableData}
+            ></c-datatable-lwc>
+        </template>
+    </div>
+    <div class="slds-box slds-theme--default">
+        Click on the link Below to Export data as csv/xls.
+        <p class="slds-m-top--large">
+            <!-- <a onclick={exportContactData}>Export Contact Data</a> -->
+            <lightning-button variant="brand" label="Export Contact data" title="Export Contact Data" onclick={exportContactData}></lightning-button>
+        </p>
+    </div>
+</template>

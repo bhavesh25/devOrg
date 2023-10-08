@@ -1,0 +1,16 @@
+<template>
+   <div align='right'>
+       
+        <lightning-icon variant="base" size="small" icon-name="utility:chevronleft" onclick={decreaseMonth} style="display: inline-block;" class='my-icon'></lightning-icon>
+        <p style="display: inline-block;"> {calendar}</p>
+       <lightning-icon variant="base" size="small" icon-name="utility:chevronright" onclick={increaseMonth} style="display: inline-block;" class='my-icon' ></lightning-icon>
+
+     </div> 
+  <div>
+      <lightning-icon variant="base" size="small" icon-name="utility:chevronup" onclick={increasey} class='my-icon' style="padding-left:15px"  ></lightning-icon>
+
+       <div class="chartContainer" style="height: 400px; width: 100%;"></div>
+    <lightning-icon variant="base" size="small" icon-name="utility:chevrondown"  onclick={decreasex} class='my-icon' style="padding-left:15px" ></lightning-icon>
+
+  </div>
+</template>

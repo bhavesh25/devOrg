@@ -1,0 +1,139 @@
+<template>
+	<div class="slds-card mainComponent">
+		<div class="mainComponentControllers">
+			<div class="mainComponentControllersBtns" onclick={SyncData}>
+				<lightning-icon icon-name='utility:sync' size='X-Small'>
+				</lightning-icon>
+				<p>Sync</p>
+			</div>
+			<div class="mainComponentControllersBtns">
+				<lightning-icon icon-name='utility:page' size='X-Small'>
+				</lightning-icon>
+				<p>Files</p>
+			</div>
+			<div class="mainComponentControllersBtns">
+				<lightning-icon icon-name='utility:date_input' size='X-Small'>
+				</lightning-icon>
+				<p>Date</p>
+				<input class="input" type="date" onchange={dateChanged} />
+			</div>
+				<div class="mainComponentControllersBtns">
+					<lightning-icon icon-name='utility:people' size='X-Small' onclick={teamMenuClick}>
+					</lightning-icon>
+					<p onclick={teamMenuClick}>Team</p>
+					<template if:true={TeamOptionsTab}>
+						<div class="TeamOptions">
+							<template for:each={TeamOptions} for:item="team">
+								<div class="teamoption" key={Id}>
+									<input type="checkbox" data-name={team.Label} checked={team.Value} onclick={teamSelected}>
+									<p>{team.Label}</p>
+								</div>
+							</template>
+						</div>
+					</template>
+				</div>
+			</div>
+			<div class="slds-card" style="padding:20px 20px 40px 0px;border-radius: 10px;">
+				<div class="calenderControllerCover">
+					<div class="calenderController">
+						<div class="calenderControllerTabs1">
+							<lightning-icon icon-name='utility:chevronleft' size='X-Small' data-name="Past"
+								onclick={calenderController} style="--sds-c-icon-color-foreground-default: #66a0ff">
+							</lightning-icon>
+						</div>
+						<div class="calenderControllerData">
+							{currentActiveMonth} {currentActiveYear}
+						</div>
+						<div class="calenderControllerTabs2">
+							<lightning-icon icon-name='utility:chevronright' size='X-Small' data-name="Future"
+								onclick={calenderController} style="--sds-c-icon-color-foreground-default: #66a0ff">
+							</lightning-icon>
+						</div>
+					</div>
+				</div>
+
+				<div class="graph">
+					<div class="graphTop">
+						<div class="graphTimeLine">
+							<div class="graphGridVerticalController">
+								<lightning-icon icon-name='utility:chevronup' size='small' data-name="Add"
+									onclick={timeStampController}
+									style="--sds-c-icon-color-foreground-default: #66a0ff">
+								</lightning-icon>
+							</div>
+							<template for:each={visibleTimeStamps} for:item="timeStamp">
+								<div key={id} class="graphGridVertical">{timeStamp}</div>
+							</template>
+							<div class="graphGridVerticalController">
+								<lightning-icon icon-name='utility:chevrondown' size='Small' data-name="Remove"
+									onclick={timeStampController}
+									style="--sds-c-icon-color-foreground-default: #66a0ff">
+								</lightning-icon>
+							</div>
+						</div>
+						<div class="graphArea" data-name="graphToDayline" onscroll={scrolled}>
+							<template if:true={noAnalytics}>
+								<div class="noAnalyticsCover">
+									<p class="noAnalytics">No Analytics Available !</p>
+								</div>
+							</template>
+							<template for:each={positionsData} for:item="positionData">
+								<div class="GridLine" key={Id}>
+									<template for:each={positionData} for:item="position">
+										<div class="GridLineBlock" key={Id} onclick={handleClick}>
+											<template if:true={position.primary}>
+												<template for:each={position.primary} for:item="image">
+													<div class={position.Classes} key={Id} style="z-index: auto;">
+														<img src={image.Img} />
+														<template if:false={position.secondary}>
+															<div class="toolTip">
+																
+																<c-knowledge-unit-tooltip tooltip-data={image}></c-knowledge-unit-tooltip>
+															</div>
+														</template>
+														<template if:true={image.Action}>
+															<img src="https://nolegy-4bd32.web.app/images/action.png" style="position: absolute; right: -5px; bottom: -3px; background: white; border-radius: 100px; width: 25px;" />
+												</template>
+													</div>
+												</template>
+											</template>
+											<template if:true={position.secondary}>
+												<div class="secondaryIconsList">
+													<template for:each={position.secondary} for:item="image">
+														<div class={position.Classes} key={Id}>
+															<img src={image.Img} />
+															<div class="toolTip">
+																<h3 style="font-size:14px">{image.Name}</h3>
+																<h1 style="font-size:15px">{image.Team}</h1>
+																<p style="font-size:12px">{image.Description}</p>
+																<c-knowledge-unit-tooltip tooltip-data={image}></c-knowledge-unit-tooltip>
+															</div>
+															<template if:true={image.Action}>
+																<img src="https://nolegy-4bd32.web.app/images/action.png" style="position: absolute; right: -5px; bottom: -3px; background: white; border-radius: 100px; width: 25px;" />
+															</template>
+														</div>
+													</template>
+												</div>
+											</template>
+										</div>
+									</template>
+								</div>
+							</template>
+						</div>
+					</div>
+					<div class="graphBottom">
+						<div class="graphDayLine">
+							<template for:each={DayStamps} for:item="Day">
+								<div key={id} class="graphGridHorizontal">
+									<p>{Day.Day}</p>
+									<template if:true={Day.ShowDate}>
+										<p style="position: absolute;color: #66A0ff;top: 22px;">( Today )</p>
+									</template>
+								</div>
+							</template>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</template>
