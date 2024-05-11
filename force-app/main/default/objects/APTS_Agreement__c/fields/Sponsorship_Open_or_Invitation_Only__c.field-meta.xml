@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsorship_Open_or_Invitation_Only__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the sponsorship involve any “Invitation only” events being hosted by Nevro? Or will it be an open event?</inlineHelpText>
+    <label>Open or Invitation Only event?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Invitation Only</fullName>
+                <default>false</default>
+                <label>Invitation Only</label>
+            </value>
+            <value>
+                <fullName>Open Event</fullName>
+                <default>false</default>
+                <label>Open Event</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

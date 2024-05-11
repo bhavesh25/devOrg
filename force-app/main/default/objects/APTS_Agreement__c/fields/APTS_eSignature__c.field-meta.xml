@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APTS_eSignature__c</fullName>
+    <description>IF(
+       RecordType.Name = &quot;Non-Disclosure Agreement&quot;
+         /*RecordType.DeveloperName = &quot;Travel_and_Expense&quot; &amp;&amp;  NOT(ISPICKVAL(Payment_Form_Travel__c, &quot;Nevro PO&quot;))*/ 
+      || APTS_Request_DocuSign__c 
+
+      || ((Text( Apttus_Approval__Approval_Status__c ) = &quot;Approved&quot;  
+          || Text(Status__c) = &quot;Other Party Signatures&quot;  
+          || Text(Status__c) = &quot;Ready for Signatures&quot;  
+          || Text(Status__c) = &quot;Signature Declined&quot;
+         )
+      &amp;&amp; NOT(ISBLANK( PO_Number__c)))
+       
+,
+
+HYPERLINK(&quot;/apex/Apttus_CMDSign__CMDocuSignCreateEnvelope?id=&quot;&amp;Id, IMAGE(&quot;/resource/Apttus_DocuApi__eSignature&quot;,&quot;Send For eSignatures&quot;), &quot;_self&quot;), 
+&quot;Missing: &quot; &amp; 
+IF(  ISBLANK(PO_Number__c ) ,&quot;Enter PO Number&quot; , 
+     IF(  NOT(ISPICKVAL( Apttus_Approval__Approval_Status__c , &quot;Approved&quot;)) , &quot;Approval Required&quot;,  
+        NULL
+        ) 
+    )</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(APTS_Request_DocuSign__c, Text(Status__c) = &quot;Ready for Signatures&quot;),
+    HYPERLINK(&quot;/apex/Apttus_CMDSign__CMDocuSignCreateEnvelope?id=&quot;&amp;Id, IMAGE(&quot;/resource/Apttus_DocuApi__eSignature&quot;,&quot;Send For eSignatures&quot;), &quot;_self&quot;), 
+    &quot;&quot;)</formula>
+    <label>Send for eSignature</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

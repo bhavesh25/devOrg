@@ -220,7 +220,51 @@ public class TaskDelegateOwnerAssignmentTest {
         // Optionally, you can query and assert on scheduled jobs to ensure it was scheduled as expected
         CronTrigger scheduledJob = [SELECT Id FROM CronTrigger WHERE CronJobDetail.Name = 'TaskDelegateOwnerAssignmentScheduler'];
         System.assertNotEquals(null, scheduledJob);
+    }
 
-        // Add any additional assertions as needed
+    @isTest
+    static void testWhenTaskIsClosed() {
+        Id ownerId = [Select Id From User Where LastName = 'ownerUser' Limit 1].Id;
+        Id delegateUserId = [Select Id From User Where LastName = 'delegateUser' Limit 1].Id;
+        Id delegatesDelegateUserId = [Select Id From User Where LastName = 'delegatesDelegateUser' Limit 1].Id;
+
+        Task tsk = [Select Id, OwnerId, Status From Task Where Subject = 'Test Task 12345' ];
+        tsk.Status = 'Completed';
+        update tsk;
+        OutOfOffice ooo = new OutOfOffice(
+            UserId = ownerId,
+            IsEnabled = true,
+            StartDate=Date.Today().addDays(-2),
+            EndDate=Date.Today().addDays(+2),
+            message='test');
+            insert ooo;
+        Test.startTest();
+        Database.executeBatch(new TaskDelegateOwnerAssignment());
+        Test.stopTest();
+        tsk = [Select Id, OwnerId From Task Where Subject = 'Test Task 12345'];
+        System.assertEquals(ownerId, tsk.OwnerId, 'Owner should not be changed when task is completed');
+    }
+
+    @isTest
+    static void testWhenTaskActivityIsNotWithinOooOfOwner() {
+        Id ownerId = [Select Id From User Where LastName = 'ownerUser' Limit 1].Id;
+        Id delegateUserId = [Select Id From User Where LastName = 'delegateUser' Limit 1].Id;
+        Id delegatesDelegateUserId = [Select Id From User Where LastName = 'delegatesDelegateUser' Limit 1].Id;
+
+        Task tsk = [Select Id, OwnerId, Status From Task Where Subject = 'Test Task 12345' ];
+        tsk.ActivityDate = Date.Today().addDays(10);
+        update tsk;
+        OutOfOffice ooo = new OutOfOffice(
+            UserId = ownerId,
+            IsEnabled = true,
+            StartDate=Date.Today().addDays(-2),
+            EndDate=Date.Today().addDays(+2),
+            message='test');
+            insert ooo;
+        Test.startTest();
+        Database.executeBatch(new TaskDelegateOwnerAssignment());
+        Test.stopTest();
+        tsk = [Select Id, OwnerId From Task Where Subject = 'Test Task 12345'];
+        System.assertEquals(ownerId, tsk.OwnerId, 'Owner should not be changed when task is completed');
     }
 }

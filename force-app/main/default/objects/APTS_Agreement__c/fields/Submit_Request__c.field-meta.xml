@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_Request__c</fullName>
+    <description>Updated 6-12-17 by Grant Garrigan - changed IF conditions. Made available when In Signatures.</description>
+    <externalId>false</externalId>
+    <formula>IF (OR(ISPICKVAL(Status_Category__c,&quot;In Authoring&quot;),
+       ISPICKVAL(Status_Category__c,&quot;In Signatures&quot;),
+       ISPICKVAL(Status_Category__c,&quot;Request&quot;)), 
+    HYPERLINK(&quot;/apex/AgreementSubmitRequest?id=&quot; &amp;Id, IMAGE(&quot;/resource/Button_SubmitRequest&quot;, &quot;Submit Request&quot;), &quot;_self&quot;), NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Submit for Legal Review</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

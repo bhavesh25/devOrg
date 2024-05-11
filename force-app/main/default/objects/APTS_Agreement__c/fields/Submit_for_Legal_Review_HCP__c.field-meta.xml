@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Legal_Review_HCP__c</fullName>
+    <description>Custom Button for Submit for Legal Review for HCP Consulting Agreements</description>
+    <externalId>false</externalId>
+    <formula>IF (
+    AND(
+       NOT( ISPICKVAL( Status_Category__c , &quot;In Effect&quot;)), 
+       RecordType.Name = &quot;HCP Consulting Agreement&quot;, 
+       APTS_CV_Provided__c 
+       ), 
+HYPERLINK(&quot;/flow/Send_for_Legal_Review?varAgreementId=&quot;&amp;Id&amp;&quot;&amp;retURL=/&quot;&amp;Id, IMAGE(&quot;/resource/Send_for_Legal_Review_Button&quot;, &quot;Send for Legal Review&quot;), &quot;_self&quot;), &quot;Please provide CV prior to submitting for Legal Review&quot;)</formula>
+    <inlineHelpText>Provide CV prior to submitting to Legal.</inlineHelpText>
+    <label>Send for Legal Review</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

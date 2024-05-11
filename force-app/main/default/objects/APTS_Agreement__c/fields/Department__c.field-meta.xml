@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Clinical</fullName>
+                <default>false</default>
+                <label>Clinical</label>
+            </value>
+            <value>
+                <fullName>Clinical &amp; Regulatory</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clinical &amp; Regulatory</label>
+            </value>
+            <value>
+                <fullName>Corporate Development</fullName>
+                <default>false</default>
+                <label>Corporate Development</label>
+            </value>
+            <value>
+                <fullName>Customer Excellence</fullName>
+                <default>false</default>
+                <label>Customer Excellence</label>
+            </value>
+            <value>
+                <fullName>Dept 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dept 3</label>
+            </value>
+            <value>
+                <fullName>Development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Development</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>G&amp;A</fullName>
+                <default>false</default>
+                <label>G&amp;A</label>
+            </value>
+            <value>
+                <fullName>HE &amp; R</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>HE &amp; R</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>HR/People</fullName>
+                <default>false</default>
+                <label>HR/People</label>
+            </value>
+            <value>
+                <fullName>Investor Relations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investor Relations</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>Learning &amp; Development</fullName>
+                <default>false</default>
+                <label>Learning &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Market Access</fullName>
+                <default>false</default>
+                <label>Market Access</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Medical Affairs</fullName>
+                <default>false</default>
+                <label>Medical Affairs</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>OUS - Australia</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - Australia</label>
+            </value>
+            <value>
+                <fullName>OUS - Belgium</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - Belgium</label>
+            </value>
+            <value>
+                <fullName>OUS - Europe</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - Europe</label>
+            </value>
+            <value>
+                <fullName>OUS - Germany</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - Germany</label>
+            </value>
+            <value>
+                <fullName>OUS - Switzerland, Austria</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - Switzerland, Austria</label>
+            </value>
+            <value>
+                <fullName>OUS - United Kingdom</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>OUS - United Kingdom</label>
+            </value>
+            <value>
+                <fullName>Professional Education</fullName>
+                <default>false</default>
+                <label>Professional Education</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+                <label>Regulatory</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales/Sales Operations</fullName>
+                <default>false</default>
+                <label>Sales/Sales Operations</label>
+            </value>
+            <value>
+                <fullName>Sales Ops</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales Ops</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

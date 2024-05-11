@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Agreement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animal Study Agreements</fullName>
+                <default>false</default>
+                <label>Animal Study Agreements</label>
+            </value>
+            <value>
+                <fullName>OUS Clinical Trial Agreements</fullName>
+                <default>false</default>
+                <label>OUS Clinical Trial Agreements</label>
+            </value>
+            <value>
+                <fullName>Clinical Facility Use Agreements</fullName>
+                <default>false</default>
+                <label>Clinical Facility Use Agreements</label>
+            </value>
+            <value>
+                <fullName>Educational Grants/Fellowship Agreements</fullName>
+                <default>false</default>
+                <label>Educational Grants/Fellowship Agreements</label>
+            </value>
+            <value>
+                <fullName>IIS Funding Agreements</fullName>
+                <default>false</default>
+                <label>IIS Funding Agreements</label>
+            </value>
+            <value>
+                <fullName>Distribution Agreements</fullName>
+                <default>false</default>
+                <label>Distribution Agreements</label>
+            </value>
+            <value>
+                <fullName>Employment Agency Agreements</fullName>
+                <default>false</default>
+                <label>Employment Agency Agreements</label>
+            </value>
+            <value>
+                <fullName>One-Time Consulting Agreements</fullName>
+                <default>false</default>
+                <label>One-Time Consulting Agreements</label>
+            </value>
+            <value>
+                <fullName>Vendor Agreements</fullName>
+                <default>false</default>
+                <label>Vendor Agreements</label>
+            </value>
+            <value>
+                <fullName>Privacy Agreements</fullName>
+                <default>false</default>
+                <label>Privacy Agreements</label>
+            </value>
+            <value>
+                <fullName>Real Estate Agreements</fullName>
+                <default>false</default>
+                <label>Real Estate Agreements</label>
+            </value>
+            <value>
+                <fullName>Supply Quality Agreements</fullName>
+                <default>false</default>
+                <label>Supply Quality Agreements</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Sales and Marketing Agreement</fullName>
+                <default>false</default>
+                <label>Sales and Marketing Agreement</label>
+            </value>
+            <value>
+                <fullName>HR Agreements</fullName>
+                <default>false</default>
+                <label>HR Agreements</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

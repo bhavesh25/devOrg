@@ -8,7 +8,7 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
     Map<Id, Id> userToDelegateUser = new Map<Id, Id>();
     Set<Id> taskOwnersIdSet = new Set<Id>();
     List<Task> taskToUpdate = new List<Task>();
-    Set<Id> todayOooUserIdSet = new Set<Id>();
+    Map<Id, OutOfOffice> userToOooMap = new Map<Id, OutOfOffice>();
     Set<Id> userIdToQuery = new Set<Id>();
     //get task owner and task deleate, delegateofdelegate details
     for (Task tsk : (List<Task>) Scope) {
@@ -50,14 +50,15 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
         StartDate,
         EndDate,
         User.DelegateDuringPTO__c,
-        User.DelegateDuringPTO__r.DelegateDuringPTO__c
+        User.DelegateDuringPTO__r.DelegateDuringPTO__c,
+        User.TimeZoneSidKey
       FROM OutOfOffice
       WHERE
         StartDate <= Today
         AND EndDate >= Today
         AND UserId IN :taskOwnersIdSet
     ]) {
-      todayOooUserIdSet.add(ooo.UserId);
+      userToOooMap.put(ooo.UserId, OOO);
     }
 
     for (Task tsk : (List<Task>) Scope) {
@@ -71,21 +72,20 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
             if (userToDelegateUser.containsKey(delegateUser)) {
                 delegatOfDelegateUserId = userToDelegateUser.get(delegateUser);
             }
-          //if task owner is not OOO, then continue
-          if (!todayOooUserIdSet.contains(tsk.OwnerId)) {
-            continue;
-          } else {
+          //if task owner is  OOO,
+          if (userToOooMap.containsKey(tsk.OwnerId) && validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(tsk.OwnerId))) {
+            //when Delegate is not set on User record
             if (!userToDelegateUser.containsKey(tsk.OwnerId)) {
                 continue;
             }
-            if (!todayOooUserIdSet.contains(delegateUser)) {
+            //check if delegate user is not OOO during task activity date
+            if (!userToOooMap.containsKey(delegateUser) || (userToOooMap.containsKey(delegateUser) && !validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(delegateUser)))) {
               tsk.Delegate__c = tsk.OwnerId;
               tsk.OwnerId = delegateUser;
               taskToUpdate.add(tsk);
               continue;
             } else if (
-              //if delegate of delegate is not ooo
-              delegatOfDelegateUserId != null 
+              delegatOfDelegateUserId != null
             ) {
               tsk.DelegateOFDeleagte__c = tsk.OwnerId;
               tsk.OwnerId = delegatOfDelegateUserId;
@@ -107,7 +107,7 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
             }
 
           //first check if original owner is back from ooo
-          if (!todayOooUserIdSet.contains(ownerId)) {
+          if (!userToOooMap.containsKey(ownerId) || (userToOooMap.containsKey(ownerId) && !validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(ownerId)))) {
             tsk.Delegate__c = null;
             tsk.OwnerId = ownerId;
             taskToUpdate.add(tsk);
@@ -115,8 +115,8 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
           }
           //when the delegated owner ( tsk.owner ) is ooo
           else if (
-            todayOooUserIdSet.contains(tsk.OwnerId) &&
-            delegatOfDelegateUserId != null
+            userToOooMap.containsKey(tsk.OwnerId) &&
+            delegatOfDelegateUserId != null && validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(tsk.OwnerId))
           ) {
             tsk.DelegateOFDeleagte__c = tsk.Delegate__c;
             tsk.Delegate__c = null;
@@ -137,7 +137,7 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
                 delegatOfDelegateUserId = userToDelegateUser.get(delegateUser);
             }
             //first check if original owner is back from ooo
-          if (!todayOooUserIdSet.contains(ownerId)) {
+          if (!userToOooMap.containsKey(ownerId) || (userToOooMap.containsKey(ownerId) && !validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(ownerId)))) {
             tsk.DelegateOFDeleagte__c = null;
             tsk.OwnerId = ownerId;
             taskToUpdate.add(tsk);
@@ -146,7 +146,7 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
           //check if original owner's delegate is back from oooo
           else if (
             userToDelegateUser.containsKey(ownerId) &&
-            !todayOooUserIdSet.contains(userToDelegateUser.get(ownerId))
+            !userToOooMap.containsKey(userToDelegateUser.get(ownerId)) || (userToOooMap.containsKey(ownerId) && !validateActivityDateBetweenOwnerOutOfOfficeDates(tsk.ActivityDate, userToOooMap.get(userToDelegateUser.get(ownerId))))
           ) {
             tsk.DelegateOFDeleagte__c = null;
             tsk.Delegate__c = ownerId;
@@ -163,7 +163,19 @@ public class TaskDelegateOwnerAssignment implements Database.Batchable<sObject> 
     }
   }
 
+  private static Boolean validateActivityDateBetweenOwnerOutOfOfficeDates(Date activityDate, OutOfOffice oooRec){
+    System.debug(oooRec);
+    TimeZone userTimeZone = TimeZone.getTimeZone(oooRec.User.TimeZoneSidKey);
+    Date startdate = oooRec.StartDate.addSeconds(userTimeZone.getOffset(oooRec.StartDate) / 1000).Date();
+    Date endDate = oooRec.EndDate.addSeconds(userTimeZone.getOffset(oooRec.EndDate) / 1000).Date();
+
+    if(activityDate >= startdate && activityDate <= endDate){ 
+        return true;
+    } else {
+        return false;
+    }
+  }
+
   public void finish(Database.BatchableContext context) {
-    // Optionally, you can add any post-processing logic here
   }
 }

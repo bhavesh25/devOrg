@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consultant_Business_Needs_multiPList__c</fullName>
+    <externalId>false</externalId>
+    <label>Legitimate business need for consultant?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Conference Presenter</fullName>
+                <default>false</default>
+                <label>Conference Presenter</label>
+            </value>
+            <value>
+                <fullName>HCP&apos;s expertise required</fullName>
+                <default>false</default>
+                <label>HCP&apos;s expertise required</label>
+            </value>
+            <value>
+                <fullName>HCP&apos;s feedback on product requested</fullName>
+                <default>false</default>
+                <label>HCP&apos;s feedback on product requested</label>
+            </value>
+            <value>
+                <fullName>HCP Educators needed in this location</fullName>
+                <default>false</default>
+                <label>HCP Educators needed in this location</label>
+            </value>
+            <value>
+                <fullName>Local surgical trainer needed (Local HCPs should only be for Preceptorships)</fullName>
+                <default>false</default>
+                <label>Preceptorship/Surgical trainer</label>
+            </value>
+            <value>
+                <fullName>Product R&amp;D/Advisory Board</fullName>
+                <default>false</default>
+                <label>Product R&amp;D/Advisory Board</label>
+            </value>
+            <value>
+                <fullName>Virtual Speakers Bureau</fullName>
+                <default>false</default>
+                <label>Virtual Speakers Bureau</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

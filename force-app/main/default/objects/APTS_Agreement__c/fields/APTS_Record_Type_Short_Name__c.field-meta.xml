@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APTS_Record_Type_Short_Name__c</fullName>
+    <description>Case (RecordType.DeveloperName,
+
+&quot;Business_Associate_Agreement&quot;, &quot;BAA&quot;,
+
+&quot;Clinical_Agreement&quot;, &quot;Clinical&quot;,
+
+&quot;Commercial_Contracts&quot;,&quot;Customer Purchase Agreement&quot;,
+
+&quot;Equipment_Loan_Agreement&quot;, &quot;Eq Loan&quot;,
+
+&quot;Distribution_Agreement&quot;, &quot;Distributor&quot;,
+
+&quot;Data_Processing_Agreement&quot;, &quot;DPA/SCC&quot;,
+
+&quot;HCP_Consulting_Agreement&quot;, &quot;HCP&quot;,
+
+&quot;IP_Licensing_Agreement&quot;, &quot;IP Licensing&quot;,
+
+&quot;Manufacturing_and_Supply_Agreement&quot;, &quot;Mfg Supply&quot;,
+
+&quot;Non_Disclosure_Agreement&quot;, &quot;NDA&quot;,
+
+&quot;Privacy_Agreement&quot;, &quot;Privacy&quot;,
+
+&quot;Sales_Agent_Agreement&quot;, &quot;Sales Agents&quot;,
+
+&quot;Services_Agreement&quot;, &quot;Services&quot;,
+
+&quot;Settlement_Agreement&quot;, &quot;Settlement&quot;,
+
+&quot;Sponsorship_Agreement&quot;, &quot;Sponsorship&quot;,
+
+&quot;Travel_and_Expense&quot;, &quot;T&amp;E&quot;,
+
+&quot;Other&quot;)</description>
+    <externalId>false</externalId>
+    <formula>Case (RecordType.DeveloperName,
+
+&quot;Business_Associate_Agreement&quot;, &quot;BAA&quot;,
+
+&quot;Clinical_Agreement&quot;, &quot;Clinical&quot;,
+
+&quot;Commercial_Contracts&quot;,&quot;Customer Purchase Agreement&quot;,
+
+&quot;Equipment_Loan_Agreement&quot;, &quot;Eq Loan&quot;,
+
+&quot;Distribution_Agreement&quot;, &quot;Distributor&quot;,
+
+&quot;Data_Processing_Agreement&quot;, &quot;DPA/SCC&quot;,
+
+&quot;Grant_Agreement&quot;, &quot;Grant&quot;,
+
+&quot;HCP_Consulting_Agreement&quot;, &quot;HCP&quot;,
+
+&quot;IP_Licensing_Agreement&quot;, &quot;IP Licensing&quot;,
+
+&quot;Manufacturing_and_Supply_Agreement&quot;, &quot;Mfg Supply&quot;,
+
+&quot;Non_Disclosure_Agreement&quot;, &quot;NDA&quot;,
+
+&quot;Privacy_Agreement&quot;, &quot;Privacy&quot;,
+
+&quot;Sales_Agent_Agreement&quot;, &quot;Sales Agents&quot;,
+
+&quot;Services_Agreement&quot;, &quot;Services&quot;,
+
+&quot;Settlement_Agreement&quot;, &quot;Settlement&quot;,
+
+&quot;Sponsorship_Agreement&quot;, &quot;Sponsorship&quot;,
+
+&quot;Travel_and_Expense&quot;, &quot;T&amp;E&quot;,
+
+&quot;Other&quot;)</formula>
+    <label>Record Type Short Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flag__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is used to identify the records which was created when agreement&apos;s &apos;On Hold&apos; is checked/unchecked. 
+That is, if Flag is set, the the record details gives when agreement was on hold.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is used to identify the records which was created when agreement&apos;s &apos;On Hold&apos; is checked/unchecked. 
+That is, if Flag is set, the the record details gives when agreement was on hold.</inlineHelpText>
+    <label>Flag</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

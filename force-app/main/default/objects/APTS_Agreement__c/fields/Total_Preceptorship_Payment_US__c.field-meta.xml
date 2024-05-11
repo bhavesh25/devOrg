@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Preceptorship_Payment_US__c</fullName>
+    <description>Autocalculates value for  US based preceptorship training.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+      AND( ISPICKVAL( Contract_Sub_Type_2__c , &quot;Flat Preceptorship Rate&quot;) ,  
+           Account__r.BillingCountry = &quot;United States&quot;,
+            Surgical_Training__c 
+          ) , 
+      (6 *  APTS_Other_Consulting_Services_Hourly__c ), 
+      0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>US Rate is Hourly Rate x 6.</inlineHelpText>
+    <label>Total Preceptorship Payment (US)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

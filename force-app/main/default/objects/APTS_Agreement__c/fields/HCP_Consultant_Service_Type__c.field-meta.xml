@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HCP_Consultant_Service_Type__c</fullName>
+    <description>Is this Consulting Service for a one-time event or ongoing services over the next 12 months? (Wizard Only)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this Consulting Service for a one-time event or ongoing services over the next 12 months?</inlineHelpText>
+    <label>HCP Consultant Service Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One-Time</fullName>
+                <default>false</default>
+                <label>One-Time</label>
+            </value>
+            <value>
+                <fullName>One-Year</fullName>
+                <default>false</default>
+                <label>One-Year</label>
+            </value>
+            <value>
+                <fullName>Two-years or more Consultancy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Two-years or more Consultancy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

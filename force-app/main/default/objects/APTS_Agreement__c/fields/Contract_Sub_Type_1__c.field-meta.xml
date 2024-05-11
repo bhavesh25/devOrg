@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Sub_Type_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Sub-Type 1</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Animal Research</fullName>
+                <default>false</default>
+                <label>Animal Research</label>
+            </value>
+            <value>
+                <fullName>BAA</fullName>
+                <default>false</default>
+                <label>BAA</label>
+            </value>
+            <value>
+                <fullName>Clinical Trial</fullName>
+                <default>false</default>
+                <label>Clinical Trial</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>CTFA</fullName>
+                <default>false</default>
+                <label>CTFA</label>
+            </value>
+            <value>
+                <fullName>Data Use Agreement</fullName>
+                <default>false</default>
+                <label>Data Use Agreement</label>
+            </value>
+            <value>
+                <fullName>Direct-Hire Agmt</fullName>
+                <default>false</default>
+                <label>Direct-Hire Agmt</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>DPA</fullName>
+                <default>false</default>
+                <label>DPA</label>
+            </value>
+            <value>
+                <fullName>Ed Grant</fullName>
+                <default>false</default>
+                <label>Ed Grant</label>
+            </value>
+            <value>
+                <fullName>Engagement Letter</fullName>
+                <default>false</default>
+                <label>Engagement Letter</label>
+            </value>
+            <value>
+                <fullName>Equipment Loan</fullName>
+                <default>false</default>
+                <label>Equipment Loan</label>
+            </value>
+            <value>
+                <fullName>Evaluation</fullName>
+                <default>false</default>
+                <label>Evaluation</label>
+            </value>
+            <value>
+                <fullName>Exhibit</fullName>
+                <default>false</default>
+                <label>Exhibit</label>
+            </value>
+            <value>
+                <fullName>Facility Use</fullName>
+                <default>false</default>
+                <label>Facility Use</label>
+            </value>
+            <value>
+                <fullName>Fellowship</fullName>
+                <default>false</default>
+                <label>Fellowship</label>
+            </value>
+            <value>
+                <fullName>HCP</fullName>
+                <default>false</default>
+                <label>HCP</label>
+            </value>
+            <value>
+                <fullName>HF10 Innovation Seminar</fullName>
+                <default>false</default>
+                <label>HF10 Innovation Seminar</label>
+            </value>
+            <value>
+                <fullName>Hospital Data Sharing</fullName>
+                <default>false</default>
+                <label>Hospital Data Sharing</label>
+            </value>
+            <value>
+                <fullName>Hotel</fullName>
+                <default>false</default>
+                <label>Hotel</label>
+            </value>
+            <value>
+                <fullName>IIS</fullName>
+                <default>false</default>
+                <label>IIS</label>
+            </value>
+            <value>
+                <fullName>Indemnity</fullName>
+                <default>false</default>
+                <label>Indemnity</label>
+            </value>
+            <value>
+                <fullName>Informed Consent</fullName>
+                <default>false</default>
+                <label>Informed Consent</label>
+            </value>
+            <value>
+                <fullName>IP Assignment</fullName>
+                <default>false</default>
+                <label>IP Assignment</label>
+            </value>
+            <value>
+                <fullName>Lease</fullName>
+                <default>false</default>
+                <label>Lease</label>
+            </value>
+            <value>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+                <label>Legal Services</label>
+            </value>
+            <value>
+                <fullName>Letter Appointments</fullName>
+                <default>false</default>
+                <label>Letter Appointments</label>
+            </value>
+            <value>
+                <fullName>Licensing</fullName>
+                <default>false</default>
+                <label>Licensing</label>
+            </value>
+            <value>
+                <fullName>Loan</fullName>
+                <default>false</default>
+                <label>Loan</label>
+            </value>
+            <value>
+                <fullName>Manufacturing &amp; Supply Agmt</fullName>
+                <default>false</default>
+                <label>Manufacturing &amp; Supply Agmt</label>
+            </value>
+            <value>
+                <fullName>Market Research</fullName>
+                <default>false</default>
+                <label>Market Research</label>
+            </value>
+            <value>
+                <fullName>Misc</fullName>
+                <default>false</default>
+                <label>Misc</label>
+            </value>
+            <value>
+                <fullName>MSA</fullName>
+                <default>false</default>
+                <label>MSA</label>
+            </value>
+            <value>
+                <fullName>Mutual</fullName>
+                <default>false</default>
+                <label>Mutual</label>
+            </value>
+            <value>
+                <fullName>NevroCare</fullName>
+                <default>false</default>
+                <label>NevroCare</label>
+            </value>
+            <value>
+                <fullName>NevroCare BAA</fullName>
+                <default>false</default>
+                <label>NevroCare BAA</label>
+            </value>
+            <value>
+                <fullName>Non-HCP</fullName>
+                <default>false</default>
+                <label>Non-HCP</label>
+            </value>
+            <value>
+                <fullName>One-Time Service</fullName>
+                <default>false</default>
+                <label>One-Time Service</label>
+            </value>
+            <value>
+                <fullName>One Way</fullName>
+                <default>false</default>
+                <label>One Way</label>
+            </value>
+            <value>
+                <fullName>One-Year Consultancy</fullName>
+                <default>false</default>
+                <label>One-Year Consultancy</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>OUS Clinical</fullName>
+                <default>false</default>
+                <label>OUS Clinical</label>
+            </value>
+            <value>
+                <fullName>Power of Attorney</fullName>
+                <default>false</default>
+                <label>Power of Attorney</label>
+            </value>
+            <value>
+                <fullName>Privacy</fullName>
+                <default>false</default>
+                <label>Privacy</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>R&amp;D Agreement</fullName>
+                <default>false</default>
+                <label>R&amp;D Agreement</label>
+            </value>
+            <value>
+                <fullName>Restaurant</fullName>
+                <default>false</default>
+                <label>Restaurant</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+            <value>
+                <fullName>SOW</fullName>
+                <default>false</default>
+                <label>SOW</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Standard Contractual Clauses</fullName>
+                <default>false</default>
+                <label>Standard Contractual Clauses</label>
+            </value>
+            <value>
+                <fullName>Stock Purchases</fullName>
+                <default>false</default>
+                <label>Stock Purchases</label>
+            </value>
+            <value>
+                <fullName>Subcontractors</fullName>
+                <default>false</default>
+                <label>Subcontractors</label>
+            </value>
+            <value>
+                <fullName>Supplier Quality Agreement</fullName>
+                <default>false</default>
+                <label>Supplier Quality Agreement</label>
+            </value>
+            <value>
+                <fullName>Temp Staffing Agmt</fullName>
+                <default>false</default>
+                <label>Temp Staffing Agmt</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Termination Letter</fullName>
+                <default>false</default>
+                <label>Termination Letter</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Two-years or more Consultancy</fullName>
+                <default>false</default>
+                <label>Two-years or more Consultancy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

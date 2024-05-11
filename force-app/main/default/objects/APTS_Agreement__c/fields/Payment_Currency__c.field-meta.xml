@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Currency__c</fullName>
+    <description>Unnecessary.</description>
+    <externalId>false</externalId>
+    <label>Payment Currency DO NOT USE</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AUD: Australian Dollars</fullName>
+                <default>false</default>
+                <label>AUD: Australian Dollars</label>
+            </value>
+            <value>
+                <fullName>CHF: Swiss Franc</fullName>
+                <default>false</default>
+                <label>CHF: Swiss Franc</label>
+            </value>
+            <value>
+                <fullName>Euro: European Union</fullName>
+                <default>false</default>
+                <label>EURO: European Union</label>
+            </value>
+            <value>
+                <fullName>GBP: Great Britain Pound</fullName>
+                <default>false</default>
+                <label>GBP: Great Britain Pound</label>
+            </value>
+            <value>
+                <fullName>USD: US Dollars</fullName>
+                <default>false</default>
+                <label>USD: US Dollars</label>
+            </value>
+            <value>
+                <fullName>Not Listed (Contact Compliance)</fullName>
+                <default>false</default>
+                <label>Not Listed (Contact Compliance)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

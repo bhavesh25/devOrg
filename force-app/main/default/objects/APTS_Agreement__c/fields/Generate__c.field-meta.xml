@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate__c</fullName>
+    <description>Generate button for Buy Side contracts. Status must equal &quot;Legal Review&quot;.</description>
+    <externalId>false</externalId>
+    <formula>IF (
+     APTS_Approve_for_Release__c
+
+     || $Profile.Name = &quot;System Administrator&quot; 
+
+     || $Profile.Name = &quot;Nevro Legal&quot;, 
+ 
+     HYPERLINK(&quot;/apex/SelectTemplate?id=&quot;&amp;Id &amp; &quot;&amp;action=Generate_Agreement&amp;templateType=Agreement&quot;, 
+     IMAGE(&quot;/resource/Button_Generate&quot;, &quot;Generate&quot;),&quot;_self&quot;),
+     &quot;Missing: &quot; &amp;
+     IF( APTS_Approve_for_Release__c , NULL, &quot;Release Approval Required&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Status = &apos;Approve for Release&apos;</inlineHelpText>
+    <label>Generate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

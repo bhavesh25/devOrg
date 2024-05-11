@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HCP_EUR_Country__c</fullName>
+    <externalId>false</externalId>
+    <formula>OR (ISPICKVAL(Licensed_Country__c , &quot;Austria&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Belgium&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Bulgaria&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Croatia&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Czechia (Czech Republic)&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Denmark&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Estonia&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Finland&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;France&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Germany&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Greece&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Hungary&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Ireland&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Italy&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Latvia&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Lithuania&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Luxembourg&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Malta&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Netherlands&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Poland&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Portugal&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Romania&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Slovakia&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Slovenia&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Spain&quot;),
+ISPICKVAL(Licensed_Country__c , &quot;Switzerland&quot;), /*SA-446*/
+ISPICKVAL(Licensed_Country__c , &quot;United Kingdom&quot;),/*SA-446*/
+ISPICKVAL(Licensed_Country__c , &quot;Sweden&quot;)
+)</formula>
+    <label>HCP EUR Country</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

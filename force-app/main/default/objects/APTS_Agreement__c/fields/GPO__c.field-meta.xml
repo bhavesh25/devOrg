@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GPO__c</fullName>
+    <externalId>false</externalId>
+    <label>GPO</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No GPO Affiliation</fullName>
+                <default>false</default>
+                <label>No GPO Affiliation</label>
+            </value>
+            <value>
+                <fullName>Allied Health Solutions</fullName>
+                <default>false</default>
+                <label>Allied Health Solutions</label>
+            </value>
+            <value>
+                <fullName>Capstone Health Alliance (Premier Regional GPO)</fullName>
+                <default>false</default>
+                <label>Capstone Health Alliance (Premier Regional GPO)</label>
+            </value>
+            <value>
+                <fullName>Cooperative Services of Florida - LeeSar</fullName>
+                <default>false</default>
+                <label>Cooperative Services of Florida - LeeSar</label>
+            </value>
+            <value>
+                <fullName>HealthTrust (HPG)</fullName>
+                <default>false</default>
+                <label>HealthTrust (HPG)</label>
+            </value>
+            <value>
+                <fullName>Intalere</fullName>
+                <default>false</default>
+                <label>Intalere</label>
+            </value>
+            <value>
+                <fullName>Premier</fullName>
+                <default>false</default>
+                <label>Premier</label>
+            </value>
+            <value>
+                <fullName>Resource Optimization and Innovation (ROI)</fullName>
+                <default>false</default>
+                <label>Resource Optimization and Innovation (ROI)</label>
+            </value>
+            <value>
+                <fullName>SURPASS (Premier High Commitment Tier)</fullName>
+                <default>false</default>
+                <label>SURPASS (Premier High Commitment Tier)</label>
+            </value>
+            <value>
+                <fullName>The Resource Group (Ascension Health)</fullName>
+                <default>false</default>
+                <label>The Resource Group (Ascension Health)</label>
+            </value>
+            <value>
+                <fullName>Vizient - Aptitude</fullName>
+                <default>false</default>
+                <label>Vizient - aptitude</label>
+            </value>
+            <value>
+                <fullName>Vizient - Captis</fullName>
+                <default>false</default>
+                <label>Vizient - Captis</label>
+            </value>
+            <value>
+                <fullName>INJX</fullName>
+                <default>false</default>
+                <label>INJX</label>
+            </value>
+            <value>
+                <fullName>Vizient - Corporate</fullName>
+                <default>false</default>
+                <label>Vizient - Corporate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

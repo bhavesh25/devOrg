@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Termination_Notice_Issue_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Date termination notice was sent / received</description>
+    <encryptionScheme>None</encryptionScheme>
+    <externalId>false</externalId>
+    <inlineHelpText>Exact date when the notification email is sent out as a reminder for the upcoming renewal=Agreement End Date” (Otherwise this would become a duplicate of Agreement End Date)</inlineHelpText>
+    <label>Termination Notice Issue Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clinical_Regulatory_HE_R__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Clinical /Regulatory / HE &amp; R Services</description>
+    <externalId>false</externalId>
+    <label>Clinical/Regulatory/HE&amp;R Support</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

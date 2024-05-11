@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The subtype of the agreement for a given agreement type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For Privacy Agreements only, Customer BAA is used when the sales rep is required to sign BAA to come onsite. 
+**Not applicable to Customer Purchase Agreements or International Pricing Agreements</inlineHelpText>
+    <label>Subtype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>0.016’’ Stylet LMR</fullName>
+                <default>false</default>
+                <label>0.016’’ Stylet LMR</label>
+            </value>
+            <value>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+                <label>Amendment</label>
+            </value>
+            <value>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+                <label>Consulting</label>
+            </value>
+            <value>
+                <fullName>Cost Estimate - Hospitals or Physicians</fullName>
+                <default>false</default>
+                <label>Cost Estimate - Hospitals or Physicians</label>
+            </value>
+            <value>
+                <fullName>Cost Estimate - Patient</fullName>
+                <default>false</default>
+                <label>Cost Estimate - Patient</label>
+            </value>
+            <value>
+                <fullName>Credit Letter</fullName>
+                <default>false</default>
+                <label>Credit Letter</label>
+            </value>
+            <value>
+                <fullName>Customer BAA</fullName>
+                <default>false</default>
+                <label>Customer BAA</label>
+            </value>
+            <value>
+                <fullName>Customer Paper</fullName>
+                <default>false</default>
+                <label>Customer Paper</label>
+            </value>
+            <value>
+                <fullName>Default</fullName>
+                <default>false</default>
+                <label>Default</label>
+            </value>
+            <value>
+                <fullName>Distributor</fullName>
+                <default>false</default>
+                <label>Distributor</label>
+            </value>
+            <value>
+                <fullName>DPA</fullName>
+                <default>false</default>
+                <label>DPA</label>
+            </value>
+            <value>
+                <fullName>Ed Grant</fullName>
+                <default>false</default>
+                <label>Ed Grant</label>
+            </value>
+            <value>
+                <fullName>Fellowship Grant</fullName>
+                <default>false</default>
+                <label>Fellowship Grant</label>
+            </value>
+            <value>
+                <fullName>FMROU</fullName>
+                <default>false</default>
+                <label>FMROU</label>
+            </value>
+            <value>
+                <fullName>HFX Access BAA</fullName>
+                <default>false</default>
+                <label>HFX Access BAA</label>
+            </value>
+            <value>
+                <fullName>Inpatient Offer</fullName>
+                <default>false</default>
+                <label>Inpatient Offer</label>
+            </value>
+            <value>
+                <fullName>LMRiQ</fullName>
+                <default>false</default>
+                <label>LMRiQ</label>
+            </value>
+            <value>
+                <fullName>LMROU</fullName>
+                <default>false</default>
+                <label>LMROU</label>
+            </value>
+            <value>
+                <fullName>LMRTSM3</fullName>
+                <default>false</default>
+                <label>LMRTSM3</label>
+            </value>
+            <value>
+                <fullName>LOP</fullName>
+                <default>false</default>
+                <label>LOP</label>
+            </value>
+            <value>
+                <fullName>MSA</fullName>
+                <default>false</default>
+                <label>MSA</label>
+            </value>
+            <value>
+                <fullName>MUO Letter</fullName>
+                <default>false</default>
+                <label>MUO Letter</label>
+            </value>
+            <value>
+                <fullName>MUO Offer</fullName>
+                <default>false</default>
+                <label>MUO Offer</label>
+            </value>
+            <value>
+                <fullName>OSEP</fullName>
+                <default>false</default>
+                <label>OSEP</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outpatient Offer</fullName>
+                <default>false</default>
+                <label>Outpatient Offer</label>
+            </value>
+            <value>
+                <fullName>PMDF</fullName>
+                <default>false</default>
+                <label>PMDF</label>
+            </value>
+            <value>
+                <fullName>Price Protect Agrmt.</fullName>
+                <default>false</default>
+                <label>Price Protect Agrmt.</label>
+            </value>
+            <value>
+                <fullName>Pricing Agrmt.</fullName>
+                <default>false</default>
+                <label>Pricing Agrmt.</label>
+            </value>
+            <value>
+                <fullName>Pricing Table</fullName>
+                <default>false</default>
+                <label>Pricing Table</label>
+            </value>
+            <value>
+                <fullName>Purchase Agreement</fullName>
+                <default>false</default>
+                <label>Purchase Agreement</label>
+            </value>
+            <value>
+                <fullName>Rebate Agrmt.</fullName>
+                <default>false</default>
+                <label>Rebate Agrmt.</label>
+            </value>
+            <value>
+                <fullName>Rebate Amd.</fullName>
+                <default>false</default>
+                <label>Rebate Amd.</label>
+            </value>
+            <value>
+                <fullName>Research Grant</fullName>
+                <default>false</default>
+                <label>Research Grant</label>
+            </value>
+            <value>
+                <fullName>RFP</fullName>
+                <default>false</default>
+                <label>RFP</label>
+            </value>
+            <value>
+                <fullName>S2 Grp.</fullName>
+                <default>false</default>
+                <label>S2 Grp.</label>
+            </value>
+            <value>
+                <fullName>S2 Grp. Rebate</fullName>
+                <default>false</default>
+                <label>S2 Grp. Rebate</label>
+            </value>
+            <value>
+                <fullName>S2 Sgl.</fullName>
+                <default>false</default>
+                <label>S2 Sgl.</label>
+            </value>
+            <value>
+                <fullName>S2 Sgl-Rebate</fullName>
+                <default>false</default>
+                <label>S2 Sgl-Rebate</label>
+            </value>
+            <value>
+                <fullName>SOW</fullName>
+                <default>false</default>
+                <label>SOW</label>
+            </value>
+            <value>
+                <fullName>Termination Letter</fullName>
+                <default>false</default>
+                <label>Termination Letter</label>
+            </value>
+            <value>
+                <fullName>Terms and Conditions</fullName>
+                <default>false</default>
+                <label>Terms and Conditions</label>
+            </value>
+            <value>
+                <fullName>T-Eval</fullName>
+                <default>false</default>
+                <label>T-Eval</label>
+            </value>
+            <value>
+                <fullName>Travel Grant</fullName>
+                <default>false</default>
+                <label>Travel Grant</label>
+            </value>
+            <value>
+                <fullName>Vendor BAA</fullName>
+                <default>false</default>
+                <label>Vendor BAA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

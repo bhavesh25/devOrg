@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_for_Legal_Review__c</fullName>
+    <description>Sends to Legal for formal review and release to other party.</description>
+    <externalId>false</externalId>
+    <formula>IF (
+    OR(
+       ISPICKVAL(Status__c,&quot;Request&quot;), 
+       ISPICKVAL(Status_Category__c,&quot;In Authoring&quot;),
+       ISPICKVAL(Status_Category__c,&quot;Request&quot;),
+       ISPICKVAL(Status_Category__c,&quot;In Signatures&quot;)
+       ),
+
+HYPERLINK(&quot;/flow/Send_for_Legal_Review?varAgreementId=&quot;&amp;Id&amp;&quot;&amp;retURL=/&quot;&amp;Id, IMAGE(&quot;/resource/Button_SendForInternalReview&quot;, &quot;Send for Legal Review&quot;), &quot;_self&quot;), NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Send for Legal Review</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

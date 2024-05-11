@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clauses__c</fullName>
+    <externalId>false</externalId>
+    <label>Clauses</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Paper</fullName>
+                <default>false</default>
+                <label>Customer Paper</label>
+            </value>
+            <value>
+                <fullName>Market Share Agreement</fullName>
+                <default>false</default>
+                <label>Market Share Agreement</label>
+            </value>
+            <value>
+                <fullName>Most Favored Nation Clause</fullName>
+                <default>false</default>
+                <label>Most Favored Nation Clause</label>
+            </value>
+            <value>
+                <fullName>Non-standard Assignment</fullName>
+                <default>false</default>
+                <label>Non-standard Assignment</label>
+            </value>
+            <value>
+                <fullName>Captis Terms and Conditions Referenced</fullName>
+                <default>false</default>
+                <label>Captis Terms and Conditions Referenced</label>
+            </value>
+            <value>
+                <fullName>HealthTrust (HPG) S2 Agreement</fullName>
+                <default>false</default>
+                <label>HealthTrust (HPG) S2 Agreement</label>
+            </value>
+            <value>
+                <fullName>Premier Terms and Conditions Referenced</fullName>
+                <default>false</default>
+                <label>Premier Terms and Conditions Referenced</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

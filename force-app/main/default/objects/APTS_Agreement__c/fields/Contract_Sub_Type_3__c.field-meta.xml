@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Sub_Type_3__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Sub-Type 3</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>With Affiliates</fullName>
+                <default>false</default>
+                <label>With Affiliates</label>
+            </value>
+            <value>
+                <fullName>Without Affiliates</fullName>
+                <default>false</default>
+                <label>Without Affiliates</label>
+            </value>
+            <value>
+                <fullName>With Non-Compete</fullName>
+                <default>false</default>
+                <label>With Non-Compete</label>
+            </value>
+            <value>
+                <fullName>Without Non-Compete</fullName>
+                <default>false</default>
+                <label>Without Non-Compete</label>
+            </value>
+            <value>
+                <fullName>Enrollment Limits</fullName>
+                <default>false</default>
+                <label>Enrollment Limits</label>
+            </value>
+            <value>
+                <fullName>No Enrollment Limit</fullName>
+                <default>false</default>
+                <label>No Enrollment Limit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

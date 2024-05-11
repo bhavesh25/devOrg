@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consultant_Services_Provided__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What services will this consultant provide?</inlineHelpText>
+    <label>Consultant Services Provided</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preceptorship/Proctorship/Surgical Training</fullName>
+                <default>false</default>
+                <label>Preceptor/ Surgical training</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Live Webinar/ Webcast (Presenter)</fullName>
+                <default>false</default>
+                <label>General Consulting: Live Webinar/Webcast (Presenter)</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Live Webinar/Webcast (Local Host)</fullName>
+                <default>false</default>
+                <label>General Consulting: Live Webinar/Webcast (Local Host)</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Peer to Peer Educational Programs</fullName>
+                <default>false</default>
+                <label>General Consulting: Peer to Peer Educational Programs</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Virtual Peer to Peer Educational Programs</fullName>
+                <default>false</default>
+                <label>General Consulting: Virtual Peer to Peer Educational Programs</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Material Development</fullName>
+                <default>false</default>
+                <label>General Consulting: Material Development</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Material Editing</fullName>
+                <default>false</default>
+                <label>General Consulting: Material Editing</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Phone/Web Consultation</fullName>
+                <default>false</default>
+                <label>General Consulting: Phone/Web Consultation</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Research &amp; Development Consultation - Individual</fullName>
+                <default>false</default>
+                <label>General Consulting: Research &amp; Development Consultation - Individual</label>
+            </value>
+            <value>
+                <fullName>General Consulting: Research &amp; Development Consultation – Program</fullName>
+                <default>false</default>
+                <label>General Consulting: Research &amp; Development Consultation - Program</label>
+            </value>
+            <value>
+                <fullName>Clinical/Regulatory/HE&amp;R Support</fullName>
+                <default>false</default>
+                <label>Clinical/Regulatory/Healthcare, Economics &amp; Reimbursement</label>
+            </value>
+            <value>
+                <fullName>Employee Field Training</fullName>
+                <default>false</default>
+                <label>General Consulting - Nevro Employee Field Training</label>
+            </value>
+            <value>
+                <fullName>General Consulting /hour</fullName>
+                <default>false</default>
+                <label>General Consulting /hour</label>
+            </value>
+            <value>
+                <fullName>Proctorship/ Surgical training</fullName>
+                <default>false</default>
+                <label>Proctorship/ Surgical training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

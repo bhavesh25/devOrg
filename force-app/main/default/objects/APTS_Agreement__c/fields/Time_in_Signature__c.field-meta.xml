@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_in_Signature__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   AND(On_Hold__c,
+       OR(RecordType.DeveloperName = 
+         &apos;Commercial_Contracts&apos;,
+          RecordType.DeveloperName = 
+         &apos;International_Pricing_Agreements&apos;)
+       ),
+   (IF(OR(ISBLANK(In_Effect_Time__c ), ISBLANK(In_Signatures_Time__c)),0,In_Effect_Time__c - In_Signatures_Time__c)) 
+    - Blocked_Days_Signatures__c,
+   
+    IF(OR(ISBLANK(In_Effect_Time__c ), ISBLANK(In_Signatures_Time__c)),0,In_Effect_Time__c - In_Signatures_Time__c)
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Time in Signature (in days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

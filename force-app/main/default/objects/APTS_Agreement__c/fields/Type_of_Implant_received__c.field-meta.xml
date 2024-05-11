@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Implant_received__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Implant received?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>With Explantation</fullName>
+                <default>false</default>
+                <label>With Explantation</label>
+            </value>
+            <value>
+                <fullName>Without Explantation</fullName>
+                <default>false</default>
+                <label>Without Explantation</label>
+            </value>
+            <value>
+                <fullName>IPG New Replacement</fullName>
+                <default>false</default>
+                <label>IPG New Replacement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

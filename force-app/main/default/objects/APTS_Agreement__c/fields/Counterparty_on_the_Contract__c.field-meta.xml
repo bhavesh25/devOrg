@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Counterparty_on_the_Contract__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please clarify who the counterparty is on the contract.</inlineHelpText>
+    <label>Counterparty on the Contract</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medical Facility</fullName>
+                <default>false</default>
+                <label>Medical Facility</label>
+            </value>
+            <value>
+                <fullName>Medical Professional</fullName>
+                <default>false</default>
+                <label>Medical Professional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

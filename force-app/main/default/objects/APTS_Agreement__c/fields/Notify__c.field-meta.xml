@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify__c</fullName>
+    <externalId>false</externalId>
+    <label>Notify</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Agreement Requester</fullName>
+                <default>false</default>
+                <label>Agreement Requester</label>
+            </value>
+            <value>
+                <fullName>Clinical</fullName>
+                <default>false</default>
+                <label>Clinical</label>
+            </value>
+            <value>
+                <fullName>DocuSign Queue</fullName>
+                <default>false</default>
+                <label>DocuSign Queue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

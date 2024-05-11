@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_long_will_the_equipment_be_loaned__c</fullName>
+    <externalId>false</externalId>
+    <label>How long will the equipment be loaned?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Long Term (greater than 90 days)</fullName>
+                <default>false</default>
+                <label>Long Term (greater than 90 days)</label>
+            </value>
+            <value>
+                <fullName>Short Term (90 days or less)</fullName>
+                <default>false</default>
+                <label>Short Term (90 days or less)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

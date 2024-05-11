@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Agreement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select an Agreement Type.</inlineHelpText>
+    <label>Type of Agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Privacy Agreement</fullName>
+                <default>false</default>
+                <label>Privacy Agreement</label>
+            </value>
+            <value>
+                <fullName>Clinical Agreement</fullName>
+                <default>false</default>
+                <label>Clinical Agreement</label>
+            </value>
+            <value>
+                <fullName>Health Care Provider (HCP) Consulting Agreement</fullName>
+                <default>false</default>
+                <label>Health Care Provider (HCP) Consulting Agreement</label>
+            </value>
+            <value>
+                <fullName>Services Agreement</fullName>
+                <default>false</default>
+                <label>Services Agreement</label>
+            </value>
+            <value>
+                <fullName>Manufacturing and Supply Agreement</fullName>
+                <default>false</default>
+                <label>Manufacturing and Supply Agreement</label>
+            </value>
+            <value>
+                <fullName>Non-Disclosure Agreement</fullName>
+                <default>false</default>
+                <label>Non-Disclosure Agreement</label>
+            </value>
+            <value>
+                <fullName>Distribution Agreement</fullName>
+                <default>false</default>
+                <label>Distribution Agreement</label>
+            </value>
+            <value>
+                <fullName>Real Estate Lease Agreement</fullName>
+                <default>false</default>
+                <label>Real Estate Lease Agreement</label>
+            </value>
+            <value>
+                <fullName>Intellectual Property Licensing Agreement</fullName>
+                <default>false</default>
+                <label>Intellectual Property Licensing Agreement</label>
+            </value>
+            <value>
+                <fullName>Other Agreement</fullName>
+                <default>false</default>
+                <label>Other Agreement</label>
+            </value>
+            <value>
+                <fullName>Pricing Agreement</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pricing Agreement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

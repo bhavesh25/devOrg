@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Applicable_Nevro_Legal_Entity__c</fullName>
+    <externalId>false</externalId>
+    <label>Applicable Nevro Legal Entity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nevro Corp.</fullName>
+                <default>false</default>
+                <label>Nevro Corp.</label>
+            </value>
+            <value>
+                <fullName>Nevro Germany GmbH</fullName>
+                <default>false</default>
+                <label>Nevro Germany GmbH</label>
+            </value>
+            <value>
+                <fullName>Nevro Medical Ltd</fullName>
+                <default>false</default>
+                <label>Nevro Medical Ltd</label>
+            </value>
+            <value>
+                <fullName>Nevro Medical Pty Ltd.</fullName>
+                <default>false</default>
+                <label>Nevro Medical Pty Ltd.</label>
+            </value>
+            <value>
+                <fullName>Nevro Medical SRL</fullName>
+                <default>false</default>
+                <label>Nevro Medical SRL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

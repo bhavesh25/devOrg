@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_Bar__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+ISPICKVAL(Status_Category__c , &quot;In Negotiations&quot;) ,IMAGE(&quot;/resource/APTS_In_Negotiations&quot;, &quot;APTS_In_Negotiations&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;In Signatures&quot;) ,IMAGE(&quot;/resource/APTS_Signatures&quot;, &quot;APTS_Signatures&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;Terminated&quot;) ,IMAGE(&quot;/resource/APTS_Terminated&quot;, &quot;APTS_Terminated&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;Cancelled&quot;) ,IMAGE(&quot;/resource/APTS_Cancelled&quot;, &quot;APTS_Cancelled&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;Amended&quot;) ,IMAGE(&quot;/resource/APTS_Amended&quot;, &quot;APTS_Amended&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;Expired&quot;) ,IMAGE(&quot;/resource/APTS_Expired&quot;, &quot;APTS_Expired&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;In Effect&quot;) ,IMAGE(&quot;/resource/APTS_Effect&quot;, &quot;APTS_Effect&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;Request&quot;), IMAGE(&quot;/resource/APTS_Request&quot;, &quot;APTS_Request&quot;, 50, 600) 
+,IF( ISPICKVAL(Status_Category__c , &quot;In Authoring&quot;), IMAGE(&quot;/resource/APTS_Authoring&quot;, &quot;APTS_Authoring&quot;, 50, 600)
+,IF( ISPICKVAL(Status_Category__c , &quot;In Review&quot;), IMAGE(&quot;/resource/In_Review&quot;, &quot;In_Review&quot;, 50, 600)
+,IF( ISPICKVAL(Status_Category__c , &quot;In Filing&quot;), IMAGE(&quot;/resource/In_Filling&quot;, &quot;In_Filling&quot;, 50, 600)
+, IMAGE(&quot;/resource/APTS_Base&quot;, &quot;APTS_Base&quot;, 50, 600) 
+) ) )))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Progress Bar</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

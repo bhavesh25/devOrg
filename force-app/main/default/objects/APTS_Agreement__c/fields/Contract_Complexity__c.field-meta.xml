@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Complexity__c</fullName>
+    <externalId>false</externalId>
+    <label>Contract Complexity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Nevro Template, No Changes</fullName>
+                <default>false</default>
+                <label>1 - quick review; send through DocuSign/ under 30 minutes</label>
+            </value>
+            <value>
+                <fullName>2 - Nevro Template, Minor Changes. Other Party Template, No Changes</fullName>
+                <default>false</default>
+                <label>2 - a few rounds of short emails/ under 2 hours</label>
+            </value>
+            <value>
+                <fullName>3 - Nevro Template, Moderate Changes. Other Party Template, Minor Changes</fullName>
+                <default>false</default>
+                <label>3 - expected amount of time for the type of agreement/ 3-5 hours</label>
+            </value>
+            <value>
+                <fullName>4 - Nevro Template, Major Changes. Other Party Template, Moderate Changes</fullName>
+                <default>false</default>
+                <label>4 - involvement of other department approvals, multiple rounds of emails/ 5-10 hours</label>
+            </value>
+            <value>
+                <fullName>5 - Other Party Template, Major Changes</fullName>
+                <default>false</default>
+                <label>5 - including 4 above, plus multiple rounds of redlines, multiple phone calls/ 10 or more hours</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
